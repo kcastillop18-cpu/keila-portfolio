@@ -109,18 +109,44 @@
     #home::before {
       content: '';
       position: absolute;
-      width: 600px; height: 600px;
+      width: 700px; height: 700px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(59,130,246,.15) 0%, transparent 70%);
-      top: -150px; right: -100px;
+      background: radial-gradient(circle, rgba(59,130,246,.18) 0%, transparent 70%);
+      top: -200px; right: -150px;
+      animation: floatOrb 8s ease-in-out infinite;
     }
     #home::after {
       content: '';
       position: absolute;
-      width: 400px; height: 400px;
+      width: 500px; height: 500px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(59,130,246,.1) 0%, transparent 70%);
-      bottom: -100px; left: -80px;
+      background: radial-gradient(circle, rgba(99,102,241,.12) 0%, transparent 70%);
+      bottom: -120px; left: -100px;
+      animation: floatOrb 10s ease-in-out infinite reverse;
+    }
+    @keyframes floatOrb {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%       { transform: translateY(-30px) scale(1.05); }
+    }
+
+    /* Floating dots */
+    .hero-dots {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .hero-dots span {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,.07);
+      animation: drift linear infinite;
+    }
+    @keyframes drift {
+      0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { transform: translateY(-20px) scale(1); opacity: 0; }
     }
 
     .hero-inner {
@@ -132,14 +158,39 @@
       z-index: 1;
     }
 
-    .hero-photo {
+    .hero-photo-wrap {
       flex-shrink: 0;
-      width: 230px; height: 230px;
+      position: relative;
+      width: 240px; height: 240px;
+    }
+    .hero-photo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
       border-radius: 50%;
-      border: 4px solid var(--accent);
+      background: conic-gradient(var(--accent), #6366F1, #06B6D4, var(--accent));
+      animation: spinRing 4s linear infinite;
+      z-index: 0;
+    }
+    .hero-photo-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      background: var(--navy);
+      z-index: 1;
+    }
+    @keyframes spinRing {
+      to { transform: rotate(360deg); }
+    }
+    .hero-photo {
+      position: relative;
+      z-index: 2;
+      width: 240px; height: 240px;
+      border-radius: 50%;
       object-fit: cover;
       object-position: 65% 20%;
-      box-shadow: 0 0 0 12px rgba(59,130,246,.15), 0 20px 60px rgba(0,0,0,.4);
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
       filter: contrast(1.05) brightness(1.05);
     }
 
@@ -173,6 +224,49 @@
       font-weight: 500;
       color: #93C5FD;
       margin-bottom: 1.2rem;
+      min-height: 1.6em;
+    }
+    .typewriter-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: var(--accent);
+      margin-left: 2px;
+      vertical-align: middle;
+      animation: blink .7s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* Hero stats */
+    .hero-stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.6rem;
+      flex-wrap: wrap;
+    }
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .hero-stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hero-stat-num span { color: var(--accent); }
+    .hero-stat-label {
+      font-size: .72rem;
+      color: #93C5FD;
+      font-weight: 500;
+      margin-top: .2rem;
+    }
+    .hero-stat-divider {
+      width: 1px;
+      height: 36px;
+      background: rgba(255,255,255,.15);
+      align-self: center;
     }
 
     .hero-desc {
@@ -458,8 +552,8 @@
       flex-direction: column;
     }
     .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 48px rgba(13,27,62,.16);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(59,130,246,.22), 0 4px 16px rgba(13,27,62,.12);
     }
 
     .project-header {
@@ -788,15 +882,77 @@
       z-index: 999;
       transition: all .25s;
     }
-    #scrollTop:hover { background: #2563EB; transform: translateY(-3px); }
+    #scrollTop:hover { background: #2563EB; transform: translateY(-3px); box-shadow: 0 8px 24px rgba(59,130,246,.5); }
     #scrollTop.visible { display: flex; }
+
+    /* Scroll down arrow */
+    .scroll-down {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .3rem;
+      color: rgba(255,255,255,.4);
+      font-size: .7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      animation: bounce 2s ease-in-out infinite;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .scroll-down i { font-size: 1rem; }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* Section divider wave */
+    .wave-divider {
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      margin-bottom: -1px;
+    }
+    .wave-divider svg { display: block; width: 100%; }
+
+    /* Skill bars */
+    .skill-bar-wrap { margin-top: .5rem; }
+    .skill-bar-row {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      margin-bottom: .6rem;
+    }
+    .skill-bar-label { font-size: .78rem; color: var(--dark); font-weight: 500; min-width: 140px; }
+    .skill-bar-track {
+      flex: 1;
+      height: 7px;
+      background: var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--accent), #6366F1);
+      width: 0;
+      transition: width 1.2s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* Nav active indicator */
+    .nav-links a.active { color: var(--accent); }
 
     /* ============================================================
        RESPONSIVE
     ============================================================ */
     @media (max-width: 900px) {
-      .hero-inner    { flex-direction: column; text-align: center; gap: 2.5rem; }
-      .hero-photo    { width: 180px; height: 180px; }
+      .hero-inner       { flex-direction: column; text-align: center; gap: 2.5rem; }
+      .hero-photo-wrap  { width: 180px; height: 180px; }
+      .hero-photo       { width: 180px; height: 180px; }
+      .hero-stats       { justify-content: center; }
       .hero-btns     { justify-content: center; }
       .hero-socials  { justify-content: center; }
       .hero-desc     { margin: 0 auto 2rem; }
@@ -849,12 +1005,17 @@
      HERO
 ============================================================ -->
 <section id="home">
+  <!-- Floating dots background -->
+  <div class="hero-dots" id="heroDots"></div>
+
   <div class="hero-inner">
-    <img src="pic.jpeg" alt="Keila Castillo Pinto" class="hero-photo" />
+    <div class="hero-photo-wrap">
+      <img src="pic.jpeg" alt="Keila Castillo" class="hero-photo" />
+    </div>
     <div class="hero-text">
-      <span class="hero-badge">Operations & Data Analytics</span>
+      <span class="hero-badge">Operations &amp; Data Analytics</span>
       <h1>Keila <span>Castillo</span></h1>
-      <p class="hero-title">Responsable de Operaciones · Business Intelligence · Data Dashboards</p>
+      <p class="hero-title" id="heroTitle"><span id="typewriterText"></span><span class="typewriter-cursor"></span></p>
       <p class="hero-desc">
         Profesional con más de 15 años liderando operaciones en empresas de clase mundial.
         Actualmente desarrollando soluciones de inteligencia de negocios y dashboards para la
@@ -866,13 +1027,35 @@
           <i class="fa fa-download" style="margin-right:.4rem"></i>Descargar CV
         </a>
       </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span class="count-up" data-target="15">0</span>+</div>
+          <div class="hero-stat-label">Años de experiencia</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span class="count-up" data-target="9">0</span></div>
+          <div class="hero-stat-label">Proyectos construidos</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span class="count-up" data-target="6">0</span></div>
+          <div class="hero-stat-label">Empresas lideradas</div>
+        </div>
+      </div>
       <div class="hero-socials">
         <a href="mailto:kcastillop.18@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
         <a href="https://wa.me/51939903908" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/keila-castillo" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/kcastillop18-cpu" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       </div>
     </div>
+  </div>
+
+  <!-- Scroll down indicator -->
+  <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+    <span>Scroll</span>
+    <i class="fa fa-chevron-down"></i>
   </div>
 </section>
 
@@ -1497,6 +1680,76 @@
       e.target.reset();
     }, 3000);
   }
+
+  // Typewriter effect
+  const roles = [
+    'Responsable de Operaciones',
+    'Business Intelligence',
+    'Data Dashboards',
+    'Líder de Equipos'
+  ];
+  let roleIdx = 0, charIdx = 0, deleting = false;
+  const tw = document.getElementById('typewriterText');
+  function typeLoop() {
+    const current = roles[roleIdx];
+    if (!deleting) {
+      tw.textContent = current.slice(0, ++charIdx);
+      if (charIdx === current.length) { deleting = true; setTimeout(typeLoop, 1800); return; }
+    } else {
+      tw.textContent = current.slice(0, --charIdx);
+      if (charIdx === 0) { deleting = false; roleIdx = (roleIdx + 1) % roles.length; }
+    }
+    setTimeout(typeLoop, deleting ? 50 : 80);
+  }
+  typeLoop();
+
+  // Count-up animation
+  function animateCount(el) {
+    const target = parseInt(el.dataset.target);
+    let current = 0;
+    const step = Math.ceil(target / 40);
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = current;
+      if (current >= target) clearInterval(timer);
+    }, 40);
+  }
+  const countObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { animateCount(e.target); countObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.count-up').forEach(el => countObs.observe(el));
+
+  // Floating dots in hero
+  (function() {
+    const container = document.getElementById('heroDots');
+    for (let i = 0; i < 18; i++) {
+      const s = document.createElement('span');
+      const size = Math.random() * 6 + 3;
+      s.style.cssText = `
+        width:${size}px; height:${size}px;
+        left:${Math.random()*100}%;
+        bottom:-${size}px;
+        animation-duration:${6 + Math.random()*10}s;
+        animation-delay:${Math.random()*8}s;
+      `;
+      container.appendChild(s);
+    }
+  })();
+
+  // Animate skill bars when visible
+  const barObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width;
+        });
+        barObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.skill-bar-wrap').forEach(el => barObs.observe(el));
 </script>
 
 </body>
