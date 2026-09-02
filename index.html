@@ -385,6 +385,56 @@
       gap: 1rem;
     }
 
+    /* Asesoría Operativa */
+    .asesoria-box {
+      margin-top: 1.8rem;
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3a6b 100%);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+      border: 1px solid rgba(59,130,246,.25);
+      box-shadow: 0 8px 32px rgba(13,27,62,.18);
+    }
+    .asesoria-header {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      font-size: .72rem;
+      font-weight: 700;
+      color: #93C5FD;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+    }
+    .asesoria-header i {
+      width: 28px; height: 28px;
+      background: rgba(59,130,246,.2);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent);
+      font-size: .8rem;
+      flex-shrink: 0;
+    }
+    .asesoria-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .asesoria-tags span {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      color: #CBD5E1;
+      font-size: .75rem;
+      font-weight: 500;
+      padding: 5px 13px;
+      border-radius: 20px;
+      transition: background .2s, border-color .2s, color .2s;
+    }
+    .asesoria-tags span:hover {
+      background: rgba(59,130,246,.25);
+      border-color: rgba(59,130,246,.5);
+      color: #fff;
+    }
+
     .info-card {
       background: var(--light);
       border: 1px solid var(--border);
@@ -1081,17 +1131,24 @@
           y Data Analytics</strong>, creando dashboards y aplicativos web que convierten datos operativos en
           decisiones estratégicas.
         </p>
-        <p>
-          Capaz de asumir nuevos retos, adaptarme a entornos cambiantes y trabajar bajo presión
-          manteniendo siempre los más altos estándares de calidad.
-        </p>
-        <div style="margin-top:1.4rem;background:var(--light);border:1px solid var(--border);border-radius:8px;padding:.9rem 1.1rem">
-          <p style="font-size:.68rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.5rem">
-            Asesoría Operativa – Nivel de Implementación
-          </p>
-          <p style="font-size:.78rem;color:var(--gray);line-height:1.8">
-            BEAT &nbsp;·&nbsp; Profuturo &nbsp;·&nbsp; Anuncios BBVA &nbsp;·&nbsp; Mercado Libre / Mercado Pago &nbsp;·&nbsp; EFE VENTAS &nbsp;·&nbsp; BANBIF VENTAS &nbsp;·&nbsp; Izipay VENTAS &nbsp;·&nbsp; ClaroFija VENTAS &nbsp;·&nbsp; Win VENTAS &nbsp;·&nbsp; Win ATC &nbsp;·&nbsp; Click to Call Claro
-          </p>
+        <div class="asesoria-box fade-up">
+          <div class="asesoria-header">
+            <i class="fa fa-briefcase"></i>
+            <span>Asesoría Operativa – Campañas Implementadas</span>
+          </div>
+          <div class="asesoria-tags">
+            <span>BEAT</span>
+            <span>Profuturo</span>
+            <span>Anuncios BBVA</span>
+            <span>Mercado Libre / Mercado Pago</span>
+            <span>EFE VENTAS</span>
+            <span>BANBIF VENTAS</span>
+            <span>Izipay VENTAS</span>
+            <span>ClaroFija VENTAS</span>
+            <span>Win VENTAS</span>
+            <span>Win ATC</span>
+            <span>Click to Call Claro</span>
+          </div>
         </div>
       </div>
 
