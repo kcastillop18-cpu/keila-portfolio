@@ -518,12 +518,11 @@
 
     .project-footer {
       padding: .7rem 1.4rem;
+      border-top: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: flex-end;
+      gap: .8rem;
     }
 
     .project-link {
@@ -536,6 +535,25 @@
       transition: gap .2s;
     }
     .project-link:hover { gap: .7rem; }
+
+    .github-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      color: var(--navy);
+      font-size: 1rem;
+      transition: background .2s, color .2s, border-color .2s;
+      flex-shrink: 0;
+    }
+    .github-link:hover {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
 
     /* ============================================================
        EDUCATION
@@ -972,7 +990,7 @@
         </div>
         <div class="project-footer">
           <a href="https://planning-app-psi.vercel.app" target="_blank" class="project-link">Abrir app <i class="fa fa-external-link-alt"></i></a>
-          <a href="https://github.com/kcastillop18-cpu/planning-app" target="_blank" class="project-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/kcastillop18-cpu/planning-app" target="_blank" class="github-link" title="Ver repositorio en GitHub"><i class="fab fa-github"></i></a>
         </div>
       </div>
 
@@ -998,7 +1016,7 @@
         </div>
         <div class="project-footer">
           <a href="https://comprobantes-extractor-ten.vercel.app" target="_blank" class="project-link">Abrir app <i class="fa fa-external-link-alt"></i></a>
-          <a href="https://github.com/kcastillop18-cpu/comprobantes-extractor" target="_blank" class="project-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/kcastillop18-cpu/comprobantes-extractor" target="_blank" class="github-link" title="Ver repositorio en GitHub"><i class="fab fa-github"></i></a>
         </div>
       </div>
 
@@ -1024,7 +1042,7 @@
         </div>
         <div class="project-footer">
           <a href="https://centix-marcacion.vercel.app" target="_blank" class="project-link">Abrir app <i class="fa fa-external-link-alt"></i></a>
-          <a href="https://github.com/kcastillop18-cpu/centix-marcacion" target="_blank" class="project-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/kcastillop18-cpu/centix-marcacion" target="_blank" class="github-link" title="Ver repositorio en GitHub"><i class="fab fa-github"></i></a>
         </div>
       </div>
 
@@ -1050,7 +1068,7 @@
         </div>
         <div class="project-footer">
           <a href="https://calculadora-urban.vercel.app" target="_blank" class="project-link">Abrir app <i class="fa fa-external-link-alt"></i></a>
-          <a href="https://github.com/kcastillop18-cpu/calculadora-urban" target="_blank" class="project-link" title="Ver repositorio"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/kcastillop18-cpu/calculadora-urban" target="_blank" class="github-link" title="Ver repositorio en GitHub"><i class="fab fa-github"></i></a>
         </div>
       </div>
 
