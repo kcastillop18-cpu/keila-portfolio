@@ -426,9 +426,19 @@
     .logo-item img {
       height: 34px;
       width: auto;
-      max-width: 120px;
+      max-width: 130px;
       object-fit: contain;
     }
+
+    .logo-band {
+      background: #0a0a0a;
+      border-radius: var(--radius);
+      padding: 1.2rem 1.8rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,.25);
+    }
+    .logo-band .logo-strip { margin-bottom: 0; }
+    .logo-band .logo-item { filter: brightness(1.1) grayscale(15%); opacity: .85; }
+    .logo-band .logo-item:hover { opacity: 1; filter: brightness(1.2) grayscale(0%); }
 
     /* Asesoría Operativa */
     .asesoria-box {
@@ -1180,6 +1190,7 @@
         <!-- Empresas donde trabajé -->
         <div style="margin-top:1.8rem">
           <div class="logo-strip-label">Experiencia en cuentas</div>
+          <div class="logo-band">
           <div class="logo-strip">
             <div class="logo-item">
               <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Movistar_2020_logo.svg" alt="Movistar" onerror="this.parentElement.style.display='none'">
@@ -1199,6 +1210,7 @@
             <div class="logo-item">
               <img src="https://logo.clearbit.com/profuturo.com.pe?size=120" alt="Profuturo" onerror="this.parentElement.style.display='none'">
             </div>
+          </div>
           </div>
         </div>
 
