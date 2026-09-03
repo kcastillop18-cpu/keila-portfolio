@@ -440,6 +440,24 @@
     .logo-band .logo-item { filter: brightness(1.1) grayscale(15%); opacity: .85; }
     .logo-band .logo-item:hover { opacity: 1; filter: brightness(1.2) grayscale(0%); }
 
+    .logo-icon-name {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .logo-icon-name img {
+      height: 28px !important;
+      width: 28px !important;
+      border-radius: 6px;
+      object-fit: contain;
+    }
+    .logo-icon-name span {
+      font-size: .82rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+
     /* Asesoría Operativa */
     .asesoria-box {
       margin-top: 1.8rem;
@@ -1215,23 +1233,46 @@
         </div>
 
         <!-- Asesoría Operativa -->
-        <div class="asesoria-box fade-up">
-          <div class="asesoria-header">
-            <i class="fa fa-briefcase"></i>
-            <span>Asesoría Operativa – Campañas Implementadas</span>
-          </div>
-          <div class="asesoria-tags">
-            <span>BEAT</span>
-            <span>Profuturo</span>
-            <span>Anuncios BBVA</span>
-            <span>Mercado Libre / Mercado Pago</span>
-            <span>EFE VENTAS</span>
-            <span>BANBIF VENTAS</span>
-            <span>Izipay VENTAS</span>
-            <span>ClaroFija VENTAS</span>
-            <span>Win VENTAS</span>
-            <span>Win ATC</span>
-            <span>Click to Call Claro</span>
+        <div style="margin-top:1.8rem">
+          <div class="logo-strip-label">Asesoría Operativa – Campañas Implementadas</div>
+          <div class="logo-band">
+            <div class="logo-strip">
+              <div class="logo-item">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mercado_Libre_wordmark_(Spanish_version).svg" alt="Mercado Libre" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mercado_Pago.svg" alt="Mercado Pago" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg" alt="BBVA" style="filter:brightness(0) invert(1)" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Claro_logo_(2017).svg" alt="Claro" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Beat_app_logo.png" alt="BEAT" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item logo-icon-name">
+                <img src="https://logo.clearbit.com/profuturo.com.pe?size=80" alt="Profuturo" onerror="this.style.display='none'">
+                <span>Profuturo</span>
+              </div>
+              <div class="logo-item logo-icon-name">
+                <img src="https://logo.clearbit.com/efe.com.pe?size=80" alt="EFE" onerror="this.style.display='none'">
+                <span>EFE</span>
+              </div>
+              <div class="logo-item logo-icon-name">
+                <img src="https://logo.clearbit.com/banbif.com.pe?size=80" alt="BANBIF" onerror="this.style.display='none'">
+                <span>BANBIF</span>
+              </div>
+              <div class="logo-item logo-icon-name">
+                <img src="https://logo.clearbit.com/izipay.pe?size=80" alt="Izipay" onerror="this.style.display='none'">
+                <span>Izipay</span>
+              </div>
+              <div class="logo-item logo-icon-name">
+                <img src="https://logo.clearbit.com/win.pe?size=80" alt="WIN" onerror="this.style.display='none'">
+                <span>WIN</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
