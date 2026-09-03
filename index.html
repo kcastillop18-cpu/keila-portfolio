@@ -437,8 +437,8 @@
       box-shadow: 0 4px 20px rgba(0,0,0,.25);
     }
     .logo-band .logo-strip { margin-bottom: 0; }
-    .logo-band .logo-item { filter: brightness(0) invert(1); opacity: .7; }
-    .logo-band .logo-item:hover { opacity: 1; }
+    .logo-band .logo-item { opacity: .8; filter: grayscale(10%); }
+    .logo-band .logo-item:hover { opacity: 1; filter: grayscale(0%); }
 
     .logo-icon-name {
       display: flex;
@@ -461,11 +461,11 @@
     /* Asesoría Operativa */
     .asesoria-box {
       margin-top: 1.8rem;
-      background: linear-gradient(135deg, var(--navy) 0%, #1a3a6b 100%);
+      background: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 100%);
       border-radius: var(--radius);
       padding: 1.4rem 1.6rem;
-      border: 1px solid rgba(59,130,246,.25);
-      box-shadow: 0 8px 32px rgba(13,27,62,.18);
+      border: 1px solid rgba(14,165,233,.3);
+      box-shadow: 0 8px 32px rgba(14,165,233,.2);
     }
     .asesoria-header {
       display: flex;
@@ -473,17 +473,17 @@
       gap: .7rem;
       font-size: .72rem;
       font-weight: 700;
-      color: #93C5FD;
+      color: #fff;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       margin-bottom: 1rem;
     }
     .asesoria-header i {
       width: 28px; height: 28px;
-      background: rgba(59,130,246,.2);
+      background: rgba(255,255,255,.25);
       border-radius: 6px;
       display: flex; align-items: center; justify-content: center;
-      color: var(--accent);
+      color: #fff;
       font-size: .8rem;
       flex-shrink: 0;
     }
@@ -493,19 +493,18 @@
       gap: .5rem;
     }
     .asesoria-tags span {
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.12);
-      color: #CBD5E1;
+      background: rgba(255,255,255,.25);
+      border: 1px solid rgba(255,255,255,.35);
+      color: #fff;
       font-size: .75rem;
-      font-weight: 500;
+      font-weight: 600;
       padding: 5px 13px;
       border-radius: 20px;
-      transition: background .2s, border-color .2s, color .2s;
+      transition: background .2s, border-color .2s;
     }
     .asesoria-tags span:hover {
-      background: rgba(59,130,246,.25);
-      border-color: rgba(59,130,246,.5);
-      color: #fff;
+      background: rgba(255,255,255,.4);
+      border-color: rgba(255,255,255,.6);
     }
 
     .info-card {
