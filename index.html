@@ -386,6 +386,61 @@
       gap: 1rem;
     }
 
+    /* Logo strips */
+    .logo-strip-label {
+      font-size: .68rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: .9rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .logo-strip-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .logo-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem;
+      margin-bottom: 2rem;
+    }
+    .logo-chip {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .45rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: .7rem 1rem;
+      min-width: 80px;
+      box-shadow: 0 2px 8px rgba(13,27,62,.06);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .logo-chip:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(59,130,246,.15);
+      border-color: rgba(59,130,246,.3);
+    }
+    .logo-chip img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+    .logo-chip span {
+      font-size: .65rem;
+      font-weight: 600;
+      color: var(--gray);
+      text-align: center;
+      white-space: nowrap;
+    }
+
     /* Asesoría Operativa */
     .asesoria-box {
       margin-top: 1.8rem;
@@ -1132,23 +1187,77 @@
           y Data Analytics</strong>, creando dashboards y aplicativos web que convierten datos operativos en
           decisiones estratégicas.
         </p>
+
+        <!-- Empresas donde trabajé -->
+        <div style="margin-top:1.8rem">
+          <div class="logo-strip-label">Experiencia en cuentas</div>
+          <div class="logo-strip">
+            <div class="logo-chip">
+              <img src="https://logo.clearbit.com/movistar.com.pe" alt="Movistar" onerror="this.style.display='none'">
+              <span>Movistar</span>
+            </div>
+            <div class="logo-chip">
+              <img src="https://logo.clearbit.com/thebeat.co" alt="BEAT" onerror="this.style.display='none'">
+              <span>BEAT</span>
+            </div>
+            <div class="logo-chip">
+              <img src="https://logo.clearbit.com/profuturo.com.pe" alt="Profuturo" onerror="this.style.display='none'">
+              <span>Profuturo</span>
+            </div>
+            <div class="logo-chip">
+              <img src="https://logo.clearbit.com/bbva.com" alt="BBVA" onerror="this.style.display='none'">
+              <span>BBVA</span>
+            </div>
+            <div class="logo-chip">
+              <img src="https://logo.clearbit.com/cencosud.com" alt="Cencosud" onerror="this.style.display='none'">
+              <span>Cencosud</span>
+            </div>
+            <div class="logo-chip">
+              <img src="https://logo.clearbit.com/claro.com.pe" alt="Claro" onerror="this.style.display='none'">
+              <span>Claro</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Asesoría Operativa -->
         <div class="asesoria-box fade-up">
           <div class="asesoria-header">
             <i class="fa fa-briefcase"></i>
             <span>Asesoría Operativa – Campañas Implementadas</span>
           </div>
-          <div class="asesoria-tags">
-            <span>BEAT</span>
-            <span>Profuturo</span>
-            <span>Anuncios BBVA</span>
-            <span>Mercado Libre / Mercado Pago</span>
-            <span>EFE VENTAS</span>
-            <span>BANBIF VENTAS</span>
-            <span>Izipay VENTAS</span>
-            <span>ClaroFija VENTAS</span>
-            <span>Win VENTAS</span>
-            <span>Win ATC</span>
-            <span>Click to Call Claro</span>
+          <div class="logo-strip" style="margin-bottom:0">
+            <div class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)">
+              <img src="https://logo.clearbit.com/mercadolibre.com" alt="Mercado Libre" onerror="this.style.display='none'">
+              <span style="color:#CBD5E1">ML / MP</span>
+            </div>
+            <div class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)">
+              <img src="https://logo.clearbit.com/bbva.com" alt="BBVA" onerror="this.style.display='none'">
+              <span style="color:#CBD5E1">BBVA</span>
+            </div>
+            <div class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)">
+              <img src="https://logo.clearbit.com/banbif.com.pe" alt="BANBIF" onerror="this.style.display='none'">
+              <span style="color:#CBD5E1">BANBIF</span>
+            </div>
+            <div class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)">
+              <img src="https://logo.clearbit.com/izipay.pe" alt="Izipay" onerror="this.style.display='none'">
+              <span style="color:#CBD5E1">Izipay</span>
+            </div>
+            <div class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)">
+              <img src="https://logo.clearbit.com/claro.com.pe" alt="Claro" onerror="this.style.display='none'">
+              <span style="color:#CBD5E1">ClaroFija</span>
+            </div>
+            <div class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)">
+              <img src="https://logo.clearbit.com/thebeat.co" alt="BEAT" onerror="this.style.display='none'">
+              <span style="color:#CBD5E1">BEAT</span>
+            </div>
+            <div class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)">
+              <img src="https://logo.clearbit.com/profuturo.com.pe" alt="Profuturo" onerror="this.style.display='none'">
+              <span style="color:#CBD5E1">Profuturo</span>
+            </div>
+            <div class="logo-chip" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)">
+              <img src="https://logo.clearbit.com/tiendas-efe.com" alt="EFE" onerror="this.style.display='none'">
+              <span style="color:#CBD5E1">EFE</span>
+            </div>
           </div>
         </div>
       </div>
