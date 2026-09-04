@@ -433,29 +433,26 @@
     .logo-band {
       background: #0a0a0a;
       border-radius: var(--radius);
-      padding: 1.2rem 1.8rem;
+      padding: 1.6rem 2rem;
       box-shadow: 0 4px 20px rgba(0,0,0,.25);
     }
-    .logo-band .logo-strip { margin-bottom: 0; }
-    .logo-band .logo-item { opacity: .9; }
-    .logo-band .logo-item:hover { opacity: 1; transform: translateY(-2px); }
-
-    .logo-pill {
-      background: #fff;
-      border-radius: 10px;
-      padding: 8px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 52px;
-      min-width: 80px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    .logo-band .logo-strip { margin-bottom: 0; gap: 1.6rem 2.8rem; }
+    .logo-band .logo-item {
+      opacity: .45;
+      filter: grayscale(30%) brightness(1.1);
+      transition: opacity .3s, filter .3s, transform .3s;
     }
-    .logo-pill img {
-      height: 32px;
+    .logo-band .logo-item:hover {
+      opacity: 1;
+      filter: grayscale(0%) brightness(1.15);
+      transform: translateY(-3px);
+    }
+    .logo-band .logo-item img {
+      height: 38px;
       width: auto;
-      max-width: 110px;
+      max-width: 120px;
       object-fit: contain;
+      border-radius: 6px;
     }
 
     /* Asesoría Operativa */
@@ -1209,39 +1206,39 @@
           <div class="logo-strip-label">Experiencia en cuentas</div>
           <div class="logo-band">
             <div class="logo-strip">
-              <div class="logo-item"><div class="logo-pill">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Movistar_2020_logo.svg" alt="Movistar" onerror="this.parentElement.parentElement.style.display='none'">
-              </div></div>
-              <div class="logo-item"><div class="logo-pill">
-                <img src="bbva.png" alt="BBVA" onerror="this.parentElement.parentElement.style.display='none'">
-              </div></div>
-              <div class="logo-item"><div class="logo-pill">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Claro_logo_(2017).svg" alt="Claro" onerror="this.parentElement.parentElement.style.display='none'">
-              </div></div>
-              <div class="logo-item"><div class="logo-pill">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cencosud-2014.svg" alt="Cencosud" onerror="this.parentElement.parentElement.style.display='none'">
-              </div></div>
-              <div class="logo-item"><div class="logo-pill">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Beat_app_logo.png" alt="BEAT" onerror="this.parentElement.parentElement.style.display='none'">
-              </div></div>
-              <div class="logo-item"><div class="logo-pill">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mercado_Libre_wordmark_(Spanish_version).svg" alt="Mercado Libre" onerror="this.parentElement.parentElement.style.display='none'">
-              </div></div>
-              <div class="logo-item"><div class="logo-pill">
-                <img src="mercado pago.jpg" alt="Mercado Pago" onerror="this.parentElement.parentElement.style.display='none'">
-              </div></div>
-              <div class="logo-item"><div class="logo-pill">
-                <img src="profuturo.png" alt="Profuturo" onerror="this.parentElement.parentElement.style.display='none'">
-              </div></div>
-              <div class="logo-item"><div class="logo-pill">
-                <img src="Efe.jpg" alt="EFE" onerror="this.parentElement.parentElement.style.display='none'">
-              </div></div>
-              <div class="logo-item"><div class="logo-pill">
-                <img src="izipay.png" alt="Izipay" onerror="this.parentElement.parentElement.style.display='none'">
-              </div></div>
-              <div class="logo-item"><div class="logo-pill">
-                <img src="win.png" alt="WIN" onerror="this.parentElement.parentElement.style.display='none'">
-              </div></div>
+              <div class="logo-item">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Movistar_2020_logo.svg" alt="Movistar" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="bbva.png" alt="BBVA" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Claro_logo_(2017).svg" alt="Claro" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cencosud-2014.svg" alt="Cencosud" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Beat_app_logo.png" alt="BEAT" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mercado_Libre_wordmark_(Spanish_version).svg" alt="Mercado Libre" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="mercado pago.jpg" alt="Mercado Pago" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="profuturo.png" alt="Profuturo" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="Efe.jpg" alt="EFE" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="izipay.png" alt="Izipay" onerror="this.parentElement.style.display='none'">
+              </div>
+              <div class="logo-item">
+                <img src="win.png" alt="WIN" onerror="this.parentElement.style.display='none'">
+              </div>
             </div>
           </div>
         </div>
